@@ -102,6 +102,7 @@
     "title": "Morris Library",
     "uid": "orygQ0n7z",
     "version": 2
-    }
+    },
+    "overwrite" : true
 
 }
