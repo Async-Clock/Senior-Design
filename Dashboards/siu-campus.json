@@ -432,6 +432,7 @@
     "title": "SIU Campus",
     "uid": "j8uIsA77k",
     "version": 4
-    }
+    },
+    "overwrite" : true
 
 }
