@@ -114,6 +114,7 @@
     "title": "Power Plant",
     "uid": "u66HlA77k",
     "version": 2
-    }
+    },
+    "overwrite" : true
 
 }
