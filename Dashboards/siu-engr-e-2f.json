@@ -150,6 +150,7 @@
     "title": "E-Building Second Floor",
     "uid": "CRJMqWCGz",
     "version": 1
-    }
+    },
+    "overwrite" : true
 
 }
