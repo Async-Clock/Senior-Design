@@ -158,6 +158,7 @@
     "title": "Server Rack Dashboard",
     "uid": "X2JFqZCGk",
     "version": 1
-    }
+    },
+    "overwrite" : true
 
 }
