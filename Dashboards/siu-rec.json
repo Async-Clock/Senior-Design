@@ -102,6 +102,7 @@
     "title": "Student Recreation Center",
     "uid": "52XFw0n7k",
     "version": 3
-    }
+    },
+    "overwrite" : true
 
 }
