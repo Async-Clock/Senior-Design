@@ -102,6 +102,7 @@
     "title": "ENGR Building",
     "uid": "3mMd8An7k",
     "version": 6
-    }
+    },
+    "overwrite" : true
 
 }
