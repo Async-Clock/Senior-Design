@@ -1,5 +1,5 @@
 {    
-    "dashboard" :{
+    "dashboard": {
     "annotations": {
         "list": [
         {
@@ -23,15 +23,11 @@
     "gnetId": null,
     "graphTooltip": 0,
     "id": null,
-    "iteration": 1631149946418,
+    "iteration": 1631203706968,
     "links": [],
     "panels": [
         {
-        "datasource": "Prometheus Local",
-        "fieldConfig": {
-            "defaults": {},
-            "overrides": []
-        },
+        "datasource": null,
         "flowchartsData": {
             "flowcharts": [
             {
@@ -105,7 +101,7 @@
                 "metricType": "serie",
                 "order": 1,
                 "overlayIcon": false,
-                "pattern": "Morris{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"PS\"}",
+                "pattern": "A-series",
                 "rangeData": [],
                 "reduce": true,
                 "refId": "A",
@@ -182,7 +178,7 @@
                 "metricType": "serie",
                 "order": 2,
                 "overlayIcon": false,
-                "pattern": "PowerPlant{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"PS\"}",
+                "pattern": "A-series",
                 "rangeData": [],
                 "reduce": true,
                 "refId": "A",
@@ -259,7 +255,7 @@
                 "metricType": "serie",
                 "order": 3,
                 "overlayIcon": false,
-                "pattern": "Recreation{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"PS\"}",
+                "pattern": "A-series",
                 "rangeData": [],
                 "reduce": true,
                 "refId": "A",
@@ -321,7 +317,7 @@
                 "metricType": "serie",
                 "order": 4,
                 "overlayIcon": false,
-                "pattern": "TrueBlood{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"PS\"}",
+                "pattern": "A-series",
                 "rangeData": [],
                 "reduce": true,
                 "refId": "A",
@@ -398,7 +394,7 @@
                 "metricType": "serie",
                 "order": 5,
                 "overlayIcon": false,
-                "pattern": "Engineering{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"PS\"}",
+                "pattern": "A-series",
                 "rangeData": [],
                 "reduce": true,
                 "refId": "A",
@@ -487,7 +483,7 @@
         }
     ],
     "refresh": "5s",
-    "schemaVersion": 27,
+    "schemaVersion": 30,
     "style": "dark",
     "tags": [],
     "templating": {
@@ -524,7 +520,7 @@
     "timezone": "",
     "title": "SIU Campus",
     "uid": "j8uIsA77k",
-    "version": 20
+    "version": 5
     },
     "overwrite" : true
 }
