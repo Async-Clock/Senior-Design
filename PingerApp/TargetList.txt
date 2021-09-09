@@ -1,0 +1,32 @@
+*DASHA Senior Design Project
+*IP Pinger and Host for Prometheus Data Source
+*Accompanying Python programs host metrics on localhost:8000
+*
+*The items are seperated by a space do not add any blanks rows
+*if a space is needed use an asterisks at postion 0 of the document
+*the line will be parsed out.
+*
+* Below is the listed targets the format is as follows
+* Gauge_Name Method_Name IP_Address
+*
+* This format allows many different scrapes to be collapsed under one
+* Gauge please utilize this and catorigize scraps
+*
+*
+*
+Engineering PS 10.2.5.2
+Engineering LTE 10.2.5.1
+Engineering MR 10.2.5.3
+Morris PS 10.2.5.5
+Morris LTE 10.2.5.4
+Morris MR 10.2.5.6
+PowerPlant PS 10.2.5.8
+PowerPlant LTE 10.2.5.7
+PowerPlant MRtoENG 10.2.5.9
+PowerPlant MRtoREC 10.2.5.10
+PowerPlant MRtoMor 10.2.5.11
+Recreation PS 10.2.5.13
+Recreation LTE 10.2.5.12
+Recreation MR 10.2.5.14
+*TrueBlood LTE 10.2.5.17 Currently not accepting IP pings
+test 1 www.google.com
