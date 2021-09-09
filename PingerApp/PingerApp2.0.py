@@ -42,20 +42,20 @@ def readTargetFile(List,fileName): #Reads from configuration file and parses dat
             
 def createGauges(List): #Takes in an nx3 list and then creates Gauges from the list data returns a list that is nx4 as it adds the new Gauge object to each list entry
     gList=[]
-    for x in range(0,len(List)):
+    for x in range(0,len(List)):#Creates G List to keep track of buildings, used as categories to store scrapes into
         if(List[x][0] not in gList):
             gList.append(List[x][0])
-            List[x].append(Gauge(List[x][0],'isUP',['method']))
+            List[x].append(Gauge(List[x][0],'isUP',['method']))#Appends gauge object 
             
             
-        else:
-            for z in range(0,len(List)):
+        else: # If the category is already instatiated this is run
+            for z in range(0,len(List)):# Searches through list to find the guage object and appends it spot [x][3]
                 if(List[x][0]==List[z][0]):
                     List[x].append(List[z][3])
                     break
     
     for x in range(0,len(List)):
-        List[x][3].labels(method=List[x][1]).set(0)
+        List[x][3].labels(method=List[x][1]).set(0)# calls gauge object located at[x][3] and sets to 0
     
 
 
