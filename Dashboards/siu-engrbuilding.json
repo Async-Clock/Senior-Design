@@ -1,108 +1,337 @@
 {
-    "dashboard": {
-    "annotations": {
-        "list": [
-        {
-            "builtIn": 1,
-            "datasource": "-- Grafana --",
-            "enable": true,
-            "hide": true,
-            "iconColor": "rgba(0, 211, 255, 1)",
-            "name": "Annotations & Alerts",
-            "target": {
-            "limit": 100,
-            "matchAny": false,
-            "tags": [],
-            "type": "dashboard"
-            },
-            "type": "dashboard"
-        }
-        ]
+ "dashboard": {
+  "annotations": {
+   "list": [
+    {
+     "builtIn": 1,
+     "datasource": "-- Grafana --",
+     "enable": true,
+     "hide": true,
+     "iconColor": "rgba(0, 211, 255, 1)",
+     "name": "Annotations & Alerts",
+     "target": {
+      "limit": 100,
+      "matchAny": false,
+      "tags": [],
+      "type": "dashboard"
+     },
+     "type": "dashboard"
+    }
+   ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": "null",
+  "links": [],
+  "panels": [
+   {
+    "datasource": "TestData DB",
+    "fieldConfig": {
+     "defaults": {},
+     "overrides": []
     },
-    "editable": true,
-    "gnetId": null,
-    "graphTooltip": 0,
-    "id": null,
-    "links": [],
-    "panels": [
+    "flowchartsData": {
+     "flowcharts": [
+      {
+       "allowDrawio": false,
+       "bgColor": null,
+       "center": true,
+       "csv": "## See more information for the syntax at https://drawio-app.com/import-from-csv-to-drawio/\n##\n## Example CSV. Use ## for comments and # for configuration.\n## The following names are reserved and should not be used (or ignored):\n## id, tooltip, placeholder(s), link and label (see below)\n##\n#\n## Node label with placeholders and HTML.\n## Default is '%name_of_first_column%'.\n#\n# label: %name%<br><i style=\"color:gray;\">%position%</i><br><a href=\"mailto:%email%\">Email</a>\n#\n## Node style (placeholders are replaced once).\n## Default is the current style for nodes.\n#\n# style: label;image=%image%;whiteSpace=wrap;html=1;rounded=1;fillColor=%fill%;strokeColor=%stroke%;\n#\n## Parent style for nodes with child nodes (placeholders are replaced once).\n#\n# parentstyle: swimlane;whiteSpace=wrap;html=1;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;\n#\n## Optional column name that contains a reference to a named style in styles.\n## Default is the current style for nodes.\n#\n# stylename: -\n#\n## JSON for named styles of the form {\"name\": \"style\", \"name\": \"style\"} where style is a cell style with\n## placeholders that are replaced once.\n#\n# styles: -\n#\n## Optional column name that contains a reference to a named label in labels.\n## Default is the current label.\n#\n# labelname: -\n#\n## JSON for named labels of the form {\"name\": \"label\", \"name\": \"label\"} where label is a cell label with\n## placeholders.\n#\n# labels: -\n#\n## Uses the given column name as the identity for cells (updates existing cells).\n## Default is no identity (empty value or -).\n#\n# identity: -\n#\n## Uses the given column name as the parent reference for cells. Default is no parent (empty or -).\n## The identity above is used for resolving the reference so it must be specified.\n#\n# parent: -\n#\n## Adds a prefix to the identity of cells to make sure they do not collide with existing cells (whose\n## IDs are numbers from 0..n, sometimes with a GUID prefix in the context of realtime collaboration).\n## Default is csvimport-.\n#\n# namespace: csvimport-\n#\n## Connections between rows (\"from\": source colum, \"to\": target column).\n## Label, style and invert are optional. Defaults are '', current style and false.\n## If placeholders are used in the style, they are replaced with data from the source.\n## An optional placeholders can be set to target to use data from the target instead.\n## In addition to label, an optional fromlabel and tolabel can be used to name the column\n## that contains the text for the label in the edges source or target (invert ignored).\n## The label is concatenated in the form fromlabel + label + tolabel if all are defined.\n## The target column may contain a comma-separated list of values.\n## Multiple connect entries are allowed.\n#\n# connect: {\"from\": \"manager\", \"to\": \"name\", \"invert\": true, \"label\": \"manages\", \\\n#          \"style\": \"curved=1;endArrow=blockThin;endFill=1;fontSize=11;\"}\n# connect: {\"from\": \"refs\", \"to\": \"id\", \"style\": \"curved=1;fontSize=11;\"}\n#\n## Node x-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# left: \n#\n## Node y-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# top: \n#\n## Node width. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the width. Default is auto.\n#\n# width: auto\n#\n## Node height. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the height. Default is auto.\n#\n# height: auto\n#\n## Padding for autosize. Default is 0.\n#\n# padding: -12\n#\n## Comma-separated list of ignored columns for metadata. (These can be\n## used for connections and styles but will not be added as metadata.)\n#\n# ignore: id,image,fill,stroke,refs,manager\n#\n## Column to be renamed to link attribute (used as link).\n#\n# link: url\n#\n## Spacing between nodes. Default is 40.\n#\n# nodespacing: 40\n#\n## Spacing between levels of hierarchical layouts. Default is 100.\n#\n# levelspacing: 100\n#\n## Spacing between parallel edges. Default is 40. Use 0 to disable.\n#\n# edgespacing: 40\n#\n## Name or JSON of layout. Possible values are auto, none, verticaltree, horizontaltree,\n## verticalflow, horizontalflow, organic, circle or a JSON string as used in Layout, Apply.\n## Default is auto.\n#\n# layout: auto\n#\n## ---- CSV below this line. First line are column names. ----\nname,position,id,location,manager,email,fill,stroke,refs,url,image\nEvan Miller,CFO,emi,Office 1,,me@example.com,#dae8fc,#6c8ebf,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-9-2-128.png\nEdward Morrison,Brand Manager,emo,Office 2,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-10-3-128.png\nRon Donovan,System Admin,rdo,Office 3,Evan Miller,me@example.com,#d5e8d4,#82b366,\"emo,tva\",https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-2-128.png\nTessa Valet,HR Director,tva,Office 4,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-3-128.png\n",
+       "download": false,
+       "editorTheme": "dark",
+       "editorUrl": "https://www.draw.io",
+       "enableAnim": true,
+       "grid": false,
+       "lock": true,
+       "name": "Main",
+       "scale": true,
+       "tooltip": true,
+       "type": "xml",
+       "url": "http://<YourUrl>/<Your XML/drawio file/api>",
+       "xml": "<mxfile host=\"app.diagrams.net\" modified=\"2021-09-08T22:56:19.989Z\" agent=\"5.0 (Windows)\" etag=\"hYOw6zt2znVxYZkpLb0F\" version=\"15.1.2\" type=\"embed\"><diagram id=\"WDzSGu8juPBmc2RMBmZe\" name=\"Page-1\">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</diagram></mxfile>",
+       "zoom": "100%"
+      }
+     ]
+    },
+    "format": "short",
+    "graphId": "flowchart_23763571993",
+    "gridPos": {
+     "h": 24,
+     "w": 24,
+     "x": 0,
+     "y": 0
+    },
+    "id": 2,
+    "newFlag": false,
+    "rulesData": {
+     "rulesData": [
+      {
+       "aggregation": "current",
+       "alias": "myRule",
+       "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+       ],
+       "column": "Time",
+       "dateFormat": "YYYY-MM-DD HH:mm:ss",
+       "decimals": 2,
+       "eventData": [],
+       "eventProp": "id",
+       "eventRegEx": false,
+       "gradient": false,
+       "hidden": false,
+       "invert": false,
+       "linkData": [
         {
-        "datasource": null,
-        "fieldConfig": {
-            "defaults": {},
-            "overrides": []
-        },
-        "flowchartsData": {
-            "flowcharts": [
-            {
-                "allowDrawio": false,
-                "bgColor": null,
-                "center": true,
-                "csv": "## See more information for the syntax at https://drawio-app.com/import-from-csv-to-drawio/\n##\n## Example CSV. Use ## for comments and # for configuration.\n## The following names are reserved and should not be used (or ignored):\n## id, tooltip, placeholder(s), link and label (see below)\n##\n#\n## Node label with placeholders and HTML.\n## Default is '%name_of_first_column%'.\n#\n# label: %name%<br><i style=\"color:gray;\">%position%</i><br><a href=\"mailto:%email%\">Email</a>\n#\n## Node style (placeholders are replaced once).\n## Default is the current style for nodes.\n#\n# style: label;image=%image%;whiteSpace=wrap;html=1;rounded=1;fillColor=%fill%;strokeColor=%stroke%;\n#\n## Parent style for nodes with child nodes (placeholders are replaced once).\n#\n# parentstyle: swimlane;whiteSpace=wrap;html=1;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;\n#\n## Optional column name that contains a reference to a named style in styles.\n## Default is the current style for nodes.\n#\n# stylename: -\n#\n## JSON for named styles of the form {\"name\": \"style\", \"name\": \"style\"} where style is a cell style with\n## placeholders that are replaced once.\n#\n# styles: -\n#\n## Optional column name that contains a reference to a named label in labels.\n## Default is the current label.\n#\n# labelname: -\n#\n## JSON for named labels of the form {\"name\": \"label\", \"name\": \"label\"} where label is a cell label with\n## placeholders.\n#\n# labels: -\n#\n## Uses the given column name as the identity for cells (updates existing cells).\n## Default is no identity (empty value or -).\n#\n# identity: -\n#\n## Uses the given column name as the parent reference for cells. Default is no parent (empty or -).\n## The identity above is used for resolving the reference so it must be specified.\n#\n# parent: -\n#\n## Adds a prefix to the identity of cells to make sure they do not collide with existing cells (whose\n## IDs are numbers from 0..n, sometimes with a GUID prefix in the context of realtime collaboration).\n## Default is csvimport-.\n#\n# namespace: csvimport-\n#\n## Connections between rows (\"from\": source colum, \"to\": target column).\n## Label, style and invert are optional. Defaults are '', current style and false.\n## If placeholders are used in the style, they are replaced with data from the source.\n## An optional placeholders can be set to target to use data from the target instead.\n## In addition to label, an optional fromlabel and tolabel can be used to name the column\n## that contains the text for the label in the edges source or target (invert ignored).\n## The label is concatenated in the form fromlabel + label + tolabel if all are defined.\n## The target column may contain a comma-separated list of values.\n## Multiple connect entries are allowed.\n#\n# connect: {\"from\": \"manager\", \"to\": \"name\", \"invert\": true, \"label\": \"manages\", \\\n#          \"style\": \"curved=1;endArrow=blockThin;endFill=1;fontSize=11;\"}\n# connect: {\"from\": \"refs\", \"to\": \"id\", \"style\": \"curved=1;fontSize=11;\"}\n#\n## Node x-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# left: \n#\n## Node y-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# top: \n#\n## Node width. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the width. Default is auto.\n#\n# width: auto\n#\n## Node height. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the height. Default is auto.\n#\n# height: auto\n#\n## Padding for autosize. Default is 0.\n#\n# padding: -12\n#\n## Comma-separated list of ignored columns for metadata. (These can be\n## used for connections and styles but will not be added as metadata.)\n#\n# ignore: id,image,fill,stroke,refs,manager\n#\n## Column to be renamed to link attribute (used as link).\n#\n# link: url\n#\n## Spacing between nodes. Default is 40.\n#\n# nodespacing: 40\n#\n## Spacing between levels of hierarchical layouts. Default is 100.\n#\n# levelspacing: 100\n#\n## Spacing between parallel edges. Default is 40. Use 0 to disable.\n#\n# edgespacing: 40\n#\n## Name or JSON of layout. Possible values are auto, none, verticaltree, horizontaltree,\n## verticalflow, horizontalflow, organic, circle or a JSON string as used in Layout, Apply.\n## Default is auto.\n#\n# layout: auto\n#\n## ---- CSV below this line. First line are column names. ----\nname,position,id,location,manager,email,fill,stroke,refs,url,image\nEvan Miller,CFO,emi,Office 1,,me@example.com,#dae8fc,#6c8ebf,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-9-2-128.png\nEdward Morrison,Brand Manager,emo,Office 2,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-10-3-128.png\nRon Donovan,System Admin,rdo,Office 3,Evan Miller,me@example.com,#d5e8d4,#82b366,\"emo,tva\",https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-2-128.png\nTessa Valet,HR Director,tva,Office 4,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-3-128.png\n",
-                "download": false,
-                "editorTheme": "dark",
-                "editorUrl": "https://www.draw.io",
-                "enableAnim": true,
-                "grid": false,
-                "lock": true,
-                "name": "Main",
-                "scale": true,
-                "tooltip": true,
-                "type": "xml",
-                "url": "http://<YourUrl>/<Your XML/drawio file/api>",
-                "xml": "<mxfile host=\"app.diagrams.net\" modified=\"2021-08-20T16:44:28.040Z\" agent=\"5.0 (Windows)\" etag=\"vzBl1vF0HMORlUpSC4Ac\" version=\"14.9.8\" type=\"embed\"><diagram id=\"WDzSGu8juPBmc2RMBmZe\" name=\"Page-1\">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</diagram></mxfile>",
-                "zoom": "100%"
-            }
-            ]
-        },
-        "format": "short",
-        "graphId": "flowchart_2",
-        "gridPos": {
-            "h": 24,
-            "w": 24,
-            "x": 0,
-            "y": 0
-        },
-        "id": 2,
-        "newFlag": false,
-        "rulesData": {
-            "rulesData": []
-        },
-        "targets": [
-            {
-            "max": 100,
-            "refId": "A",
-            "scenarioId": "random_walk"
-            },
-            {
-            "hide": false,
-            "max": 100,
-            "refId": "B",
-            "scenarioId": "random_walk"
-            }
-        ],
-        "transparent": true,
-        "type": "agenty-flowcharting-panel",
-        "valueName": "current",
-        "version": "0.9.0"
+         "hidden": false,
+         "linkOn": "a",
+         "linkParams": false,
+         "linkUrl": "/d/X2JFqZCGk/server-rack-dashboard?orgId=1",
+         "pattern": "35"
         }
+       ],
+       "linkProp": "id",
+       "linkRegEx": true,
+       "mappingType": 1,
+       "metricType": "serie",
+       "order": 1,
+       "overlayIcon": false,
+       "pattern": "/.*/",
+       "rangeData": [],
+       "reduce": true,
+       "refId": "A",
+       "sanitize": false,
+       "shapeData": [],
+       "shapeProp": "id",
+       "shapeRegEx": true,
+       "stringThresholds": [
+        "/.*/",
+        "/.*/"
+       ],
+       "textData": [],
+       "textProp": "id",
+       "textRegEx": true,
+       "thresholds": [
+        50,
+        80
+       ],
+       "tooltip": false,
+       "tooltipColors": false,
+       "tooltipLabel": "",
+       "tooltipOn": "a",
+       "tpDirection": "v",
+       "tpGraph": false,
+       "tpGraphHigh": null,
+       "tpGraphLow": null,
+       "tpGraphScale": "linear",
+       "tpGraphSize": "100%",
+       "tpGraphType": "line",
+       "type": "number",
+       "unit": "short",
+       "valueData": []
+      },
+      {
+       "aggregation": "current",
+       "alias": "ENG MR",
+       "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(50, 172, 45, 0.97)"
+       ],
+       "column": "Time",
+       "dateFormat": "YYYY-MM-DD HH:mm:ss",
+       "decimals": 2,
+       "eventData": [],
+       "eventProp": "id",
+       "eventRegEx": false,
+       "gradient": false,
+       "hidden": false,
+       "invert": false,
+       "linkData": [
+        {
+         "hidden": false,
+         "linkOn": "a",
+         "linkParams": false,
+         "linkUrl": "https://10.2.5.3",
+         "pattern": "48"
+        }
+       ],
+       "linkProp": "id",
+       "linkRegEx": true,
+       "mappingType": 1,
+       "metricType": "serie",
+       "order": 2,
+       "overlayIcon": false,
+       "pattern": "A-series",
+       "rangeData": [],
+       "reduce": false,
+       "refId": "A",
+       "sanitize": false,
+       "shapeData": [
+        {
+         "colorOn": "a",
+         "hidden": false,
+         "pattern": "50",
+         "style": "fillColor"
+        }
+       ],
+       "shapeProp": "id",
+       "shapeRegEx": true,
+       "stringThresholds": [
+        "/.*/"
+       ],
+       "textData": [],
+       "textProp": "id",
+       "textRegEx": true,
+       "thresholds": [
+        1
+       ],
+       "tooltip": false,
+       "tooltipColors": false,
+       "tooltipLabel": "",
+       "tooltipOn": "a",
+       "tpDirection": "v",
+       "tpGraph": false,
+       "tpGraphHigh": null,
+       "tpGraphLow": null,
+       "tpGraphScale": "linear",
+       "tpGraphSize": "100%",
+       "tpGraphType": "line",
+       "type": "number",
+       "unit": "short",
+       "valueData": []
+      },
+      {
+       "aggregation": "current",
+       "alias": "ENG LTE",
+       "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(50, 172, 45, 0.97)"
+       ],
+       "column": "Time",
+       "dateFormat": "YYYY-MM-DD HH:mm:ss",
+       "decimals": 2,
+       "eventData": [],
+       "eventProp": "id",
+       "eventRegEx": false,
+       "gradient": false,
+       "hidden": false,
+       "invert": false,
+       "linkData": [],
+       "linkProp": "id",
+       "linkRegEx": true,
+       "mappingType": 1,
+       "metricType": "serie",
+       "order": 3,
+       "overlayIcon": false,
+       "pattern": "A-series",
+       "rangeData": [],
+       "reduce": true,
+       "refId": "A",
+       "sanitize": false,
+       "shapeData": [
+        {
+         "colorOn": "a",
+         "hidden": false,
+         "pattern": "51",
+         "style": "fillColor"
+        }
+       ],
+       "shapeProp": "id",
+       "shapeRegEx": true,
+       "stringThresholds": [
+        "/.*/"
+       ],
+       "textData": [],
+       "textProp": "id",
+       "textRegEx": true,
+       "thresholds": [
+        1
+       ],
+       "tooltip": false,
+       "tooltipColors": false,
+       "tooltipLabel": "",
+       "tooltipOn": "a",
+       "tpDirection": "v",
+       "tpGraph": false,
+       "tpGraphHigh": null,
+       "tpGraphLow": null,
+       "tpGraphScale": "linear",
+       "tpGraphSize": "100%",
+       "tpGraphType": "line",
+       "type": "number",
+       "unit": "short",
+       "valueData": []
+      }
+     ]
+    },
+    "targets": [
+     {
+      "alias": "",
+      "csvWave": {
+       "timeStep": 60,
+       "valuesCSV": "0,0,2,2,1,1"
+      },
+      "exemplar": true,
+      "expr": "Engineering{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"LTE\"}",
+      "interval": "",
+      "legendFormat": "",
+      "lines": 10,
+      "max": 1,
+      "min": 1,
+      "points": [],
+      "pulseWave": {
+       "offCount": 3,
+       "offValue": 1,
+       "onCount": 3,
+       "onValue": 2,
+       "timeStep": 60
+      },
+      "refId": "A",
+      "scenarioId": "random_walk",
+      "stream": {
+       "bands": 1,
+       "noise": 2.2,
+       "speed": 250,
+       "spread": 3.5,
+       "type": "signal"
+      },
+      "stringInput": ""
+     },
+     {
+      "exemplar": true,
+      "expr": "Engineering{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"MR\"}",
+      "hide": false,
+      "interval": "",
+      "legendFormat": "",
+      "max": 100,
+      "refId": "B",
+      "scenarioId": "random_walk"
+     }
     ],
-    "refresh": "5s",
-    "schemaVersion": 27,
-    "style": "dark",
-    "tags": [],
-    "templating": {
-        "list": []
-    },
-    "time": {
-        "from": "now-6h",
-        "to": "now"
-    },
-    "timepicker": {},
-    "timezone": "",
-    "title": "ENGR Building",
-    "uid": "3mMd8An7k",
-    "version": 6
-    },
-    "overwrite" : true
-
+    "transparent": true,
+    "type": "agenty-flowcharting-panel",
+    "valueName": "current",
+    "version": "0.9.0"
+   }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+   "list": []
+  },
+  "time": {
+   "from": "now-6h",
+   "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "ENGR Building",
+  "uid": "3mMd8An7k",
+  "version": "null",
+  "overwrite": "true"
+ }
 }
