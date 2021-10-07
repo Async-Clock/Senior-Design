@@ -10,6 +10,7 @@ nssmFilePath= filepath+'\\nssm.exe"'
 widthpad=80
 workingDirName = os.path.dirname(sys.argv[0])
 selection=1
+SLEEP=8
 
 while(selection !=0):
     os.system('cls')
@@ -57,11 +58,13 @@ while(selection !=0):
                 print(output)
                 output=subprocess.getoutput(temp3)
                 print(output)
-                time.sleep(4)
+                print("Please Restart the PC to Update services")
+                time.sleep(SLEEP)
         
         
         else:
-            print("C:\\Dash Project Files already exists please remove it")
+            print("C:\\Dash Project Files already exists please remove it using Uninstall")
+            time.sleep(SLEEP)
 
 
     if(selection==2):
@@ -77,7 +80,8 @@ while(selection !=0):
         temp='rmdir /q /s '+filepath+'"'
         output=subprocess.getoutput(temp)
         print(output)
-        time.sleep(4)
+        print("Please Restart the PC to Update services")
+        time.sleep(SLEEP)
 
 
     if(selection==3):
@@ -90,7 +94,8 @@ while(selection !=0):
         print(output)
         output=subprocess.getoutput(temp3)
         print(output)
-        time.sleep(4)
+        print("Please Restart the PC to Update services")
+        time.sleep(SLEEP)
     
 
     if(selection==4):
@@ -103,5 +108,6 @@ while(selection !=0):
         print(output)
         output=subprocess.getoutput(temp3)
         print(output)
-        time.sleep(4)
+        print("Please Restart the PC to Update services")
+        time.sleep(SLEEP)
 
