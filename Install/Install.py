@@ -63,7 +63,7 @@ while(selection !=0):
         
         
         else:
-            print("C:\\Dash Project Files already exists please remove it using Uninstall")
+            print("C:\\Dash Project Files already exists please remove it")
             time.sleep(SLEEP)
 
 
