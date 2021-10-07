@@ -20,7 +20,10 @@ while(selection !=0):
     print("Options:".ljust(widthpad,' '))
     print("0-Exit".ljust(widthpad,' '))
     print("1-Install".ljust(widthpad,' '))
-    print("2-Create Services".ljust(widthpad,' '))
+    print("2-Uninstall".ljust(widthpad,' '))
+    print("3-Create Services".ljust(widthpad,' '))
+    print("4-Remove Services".ljust(widthpad,' '))
+    
 
     selection=int(input())
 
@@ -32,31 +35,73 @@ while(selection !=0):
         if(output==''):
             
             temp='xcopy "'+workingDirName+zipfilename+'" '+filepath+'"'
-            temp2='tar -xf '+ filepath+zipfilename+'"'+' -C '+filepath+'"'
-            temp3='del /f '+filepath+zipfilename+'"'
-            output=subprocess.getoutput([temp,temp2,temp3])
+            output=subprocess.getoutput(temp)
             print(output)
 
+            temp='tar -xf '+ filepath+zipfilename+'"'+' -C '+filepath+'"'
+            output=subprocess.getoutput(temp)
+            print(output)
 
-        
+            temp='del /f '+filepath+zipfilename+'"'
+            output=subprocess.getoutput(temp)
+            print(output)
+
             selection=input("Do you want install as services(y/n)")
             if(selection=='y'):
                 temp=nssmFilePath + ' install Grafana '+ filepath+'\\grafana-8.1.5\\bin\\grafana-server.exe"'
-                temp2=nssmFilePath + ' set Grafana AppDirectory '+ filepath+'\\grafana-8.1.5"'
-                temp3=nssmFilePath + ' install Prometheus '+ filepath+'\\Prometheus\\prometheus.exe"'
-                temp4=nssmFilePath + ' install Grafana '+ filepath+'\\PingerApp"'
-                output=subprocess.getoutput([temp,temp2,temp3])
+                temp2=nssmFilePath + ' install Prometheus '+ filepath+'\\Prometheus\\prometheus.exe"'
+                temp3=nssmFilePath + ' install PingerApp '+ filepath+'\\PingerApp\\PingerApp.exe"'
+                output=subprocess.getoutput(temp)
                 print(output)
+                output=subprocess.getoutput(temp2)
+                print(output)
+                output=subprocess.getoutput(temp3)
+                print(output)
+                time.sleep(4)
         
         
         else:
-            print("C:\\Dash Project Files already exists")
+            print("C:\\Dash Project Files already exists please remove it")
+
 
     if(selection==2):
-        temp=nssmFilePath + ' install Grafana '+ filepath+'\\grafana-8.1.5\\bin\\grafana-server.exe"'
-        temp2=nssmFilePath + ' set Grafana AppDirectory '+ filepath+'\\grafana-8.1.5"'
-        temp3=nssmFilePath + ' install Prometheus '+ filepath+'\\Prometheus\\prometheus.exe"'
-        temp4=nssmFilePath + ' install Grafana '+ filepath+'\\grafana-8.1.5\\bin\\grafana-server.exe"'
-        output=subprocess.getoutput([temp,temp2,temp3])
+        temp=nssmFilePath + ' remove Grafana '+'confirm'
+        temp2=nssmFilePath + ' remove Prometheus '+'confirm'
+        temp3=nssmFilePath + ' remove PingerApp '+ 'confirm'
+        output=subprocess.getoutput(temp)
         print(output)
+        output=subprocess.getoutput(temp2)
+        print(output)
+        output=subprocess.getoutput(temp3)
+        print(output)
+        temp='rmdir /q /s '+filepath+'"'
+        output=subprocess.getoutput(temp)
+        print(output)
+        time.sleep(4)
+
+
+    if(selection==3):
+        temp=nssmFilePath + ' install Grafana '+ filepath+'\\grafana-8.1.5\\bin\\grafana-server.exe"'
+        temp2=nssmFilePath + ' install Prometheus '+ filepath+'\\Prometheus\\prometheus.exe"'
+        temp3=nssmFilePath + ' install PingerApp '+ filepath+'\\PingerApp\\PingerApp.exe"'
+        output=subprocess.getoutput(temp)
+        print(output)
+        output=subprocess.getoutput(temp2)
+        print(output)
+        output=subprocess.getoutput(temp3)
+        print(output)
+        time.sleep(4)
+    
+
+    if(selection==4):
+        temp=nssmFilePath + ' remove Grafana '+'confirm'
+        temp2=nssmFilePath + ' remove Prometheus '+'confirm'
+        temp3=nssmFilePath + ' remove PingerApp '+ 'confirm'
+        output=subprocess.getoutput(temp)
+        print(output)
+        output=subprocess.getoutput(temp2)
+        print(output)
+        output=subprocess.getoutput(temp3)
+        print(output)
+        time.sleep(4)
 
