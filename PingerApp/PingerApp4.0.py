@@ -51,6 +51,7 @@ def readTargetFile(List,fileName): #Reads from configuration file and parses dat
             
 def createGauges(List): #Takes in an nx3 list and then creates Gauges from the list data returns a list that is nx4 as it adds the new Gauge object to each list entry
     gList=[]
+    
     for x in range(0,len(List)):
         if(List[x][0] not in gList):
             gList.append(List[x][0])
@@ -78,6 +79,7 @@ tList=[]
 pathname = os.path.dirname(sys.argv[0])
 fileName=pathname+"\\TargetList.txt"
 Sleep=100
+Timeout=0.05
 #Reads file creates Gauges then starts the HTTP server
 readTargetFile(tList,fileName)
 createGauges(tList)
@@ -88,7 +90,7 @@ while 1: # Simple Code that loops and pings addresses inside of list
     
     
     for obj in tList:
-        pingTemp=ping(obj[2],0.05)
+        pingTemp=ping(obj[2],Timeout)
         print(pingTemp)
         if(pingTemp):
             obj[3].labels(method=obj[1]).set(pingTemp)
@@ -97,7 +99,7 @@ while 1: # Simple Code that loops and pings addresses inside of list
             i=0
             while(i<3 | pingTemp != 1):
                 print("Ping Failed Trying Again")
-                pingTemp=ping(obj[2],0.05)
+                pingTemp=ping(obj[2],Timeout)
                 i=i+1
             obj[3].labels(method=obj[1]).set(pingTemp)
     print(Sleep)        

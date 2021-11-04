@@ -1,19 +1,20 @@
-*DASHA Senior Design Project
-*IP Pinger and Host for Prometheus Data Source
-*Accompanying Python programs host metrics on localhost:8000
+  DASH Senior Design Project
+* IP Pinger and Host for Prometheus Data Source
+* Accompanying Python programs host metrics on localhost:8000
 *
-*The items are seperated by a space do not add any blanks rows
-*if a space is needed use an asterisks at postion 0 of the document
-*the line will be parsed out.
+* The items are separated by a space do not add any blanks rows
+* If a space is needed use an asterisks at position 0 of the document
+* The line will be parsed out.
 *
 * Below is the listed targets the format is as follows
 * Gauge_Name Method_Name IP_Address
 *
 * This format allows many different scrapes to be collapsed under one
-* Gauge please utilize this and catorigize scraps
+* Gauge please utilize this and categorize scraps
+* The *? functions an interrupt and specifies the sleep interval between pings
 *
 *
-*?10
+*?100
 Engineering PS 10.2.5.2
 Engineering LTE 10.2.5.1
 Engineering MR 10.2.5.3
