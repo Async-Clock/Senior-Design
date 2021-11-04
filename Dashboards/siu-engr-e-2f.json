@@ -18,6 +18,7 @@
   "graphTooltip": 0,
   "id": null,
   "links": [],
+  "overwrite": true,
   "panels": [
    {
     "datasource": null,
@@ -149,7 +150,7 @@
   "timezone": "",
   "title": "E-Building Second Floor",
   "uid": "CRJMqWCGz",
-  "version": null,
-  "overwrite": true
- }
+  "version": null
+ },
+ "overwrite": true
 }

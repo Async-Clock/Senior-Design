@@ -24,6 +24,7 @@
   "graphTooltip": 0,
   "id": null,
   "links": [],
+  "overwrite": true,
   "panels": [
    {
     "datasource": null,
@@ -197,7 +198,7 @@
   "timezone": "",
   "title": "Server Room Dashboard",
   "uid": "Dqh7P0n7k",
-  "version": null,
-  "overwrite": true
- }
+  "version": null
+ },
+ "overwrite": true
 }
