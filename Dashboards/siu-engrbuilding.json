@@ -22,11 +22,11 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": "null",
+  "id": null,
   "links": [],
   "panels": [
    {
-    "datasource": "TestData DB",
+    "datasource": "Prometheus Local",
     "fieldConfig": {
      "defaults": {},
      "overrides": []
@@ -88,7 +88,7 @@
          "hidden": false,
          "linkOn": "a",
          "linkParams": false,
-         "linkUrl": "/d/X2JFqZCGk/server-rack-dashboard?orgId=1",
+         "linkUrl": "/d/Dqh7P0n7k/server-room-dashboard?orgId=1",
          "pattern": "35"
         }
        ],
@@ -148,24 +148,16 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [
-        {
-         "hidden": false,
-         "linkOn": "a",
-         "linkParams": false,
-         "linkUrl": "https://10.2.5.3",
-         "pattern": "48"
-        }
-       ],
+       "linkData": [],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
        "metricType": "serie",
        "order": 2,
        "overlayIcon": false,
-       "pattern": "A-series",
+       "pattern": "Engineering{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"MR\"}",
        "rangeData": [],
-       "reduce": false,
+       "reduce": true,
        "refId": "A",
        "sanitize": false,
        "shapeData": [
@@ -225,7 +217,7 @@
        "metricType": "serie",
        "order": 3,
        "overlayIcon": false,
-       "pattern": "A-series",
+       "pattern": "Engineering{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"LTE\"}",
        "rangeData": [],
        "reduce": true,
        "refId": "A",
@@ -268,36 +260,13 @@
     },
     "targets": [
      {
-      "alias": "",
-      "csvWave": {
-       "timeStep": 60,
-       "valuesCSV": "0,0,2,2,1,1"
-      },
       "exemplar": true,
       "expr": "Engineering{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"LTE\"}",
       "interval": "",
       "legendFormat": "",
-      "lines": 10,
-      "max": 1,
-      "min": 1,
-      "points": [],
-      "pulseWave": {
-       "offCount": 3,
-       "offValue": 1,
-       "onCount": 3,
-       "onValue": 2,
-       "timeStep": 60
-      },
+      "max": 100,
       "refId": "A",
-      "scenarioId": "random_walk",
-      "stream": {
-       "bands": 1,
-       "noise": 2.2,
-       "speed": 250,
-       "spread": 3.5,
-       "type": "signal"
-      },
-      "stringInput": ""
+      "scenarioId": "random_walk"
      },
      {
       "exemplar": true,
@@ -331,7 +300,7 @@
   "timezone": "",
   "title": "ENGR Building",
   "uid": "3mMd8An7k",
-  "version": "null"
- },
- "overwrite": "true"
+  "version": null,
+  "overwrite": true
+ }
 }
