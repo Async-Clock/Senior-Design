@@ -26,11 +26,8 @@
   "links": [],
   "panels": [
    {
-    "datasource": "Prometheus Local",
-    "fieldConfig": {
-     "defaults": {},
-     "overrides": []
-    },
+    "datasource": "Prometheus",
+    "editedFlag": false,
     "flowchartsData": {
      "flowcharts": [
       {
@@ -82,7 +79,15 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [],
+       "linkData": [
+        {
+         "hidden": false,
+         "linkOn": "a",
+         "linkParams": false,
+         "linkUrl": "https://10.2.5.11",
+         "pattern": "47"
+        }
+       ],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
@@ -91,7 +96,7 @@
        "overlayIcon": false,
        "pattern": "PowerPlant{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"MRtoMor\"}",
        "rangeData": [],
-       "reduce": false,
+       "reduce": true,
        "refId": "A",
        "sanitize": false,
        "shapeData": [
@@ -144,7 +149,15 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [],
+       "linkData": [
+        {
+         "hidden": false,
+         "linkOn": "a",
+         "linkParams": false,
+         "linkUrl": "https://10.2.5.9",
+         "pattern": "48"
+        }
+       ],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
@@ -206,7 +219,15 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [],
+       "linkData": [
+        {
+         "hidden": false,
+         "linkOn": "a",
+         "linkParams": false,
+         "linkUrl": "https://10.2.5.10",
+         "pattern": "50"
+        }
+       ],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
@@ -268,7 +289,15 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [],
+       "linkData": [
+        {
+         "hidden": false,
+         "linkOn": "a",
+         "linkParams": false,
+         "linkUrl": "http://10.2.5.4",
+         "pattern": "51"
+        }
+       ],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
@@ -360,11 +389,11 @@
     "transparent": true,
     "type": "agenty-flowcharting-panel",
     "valueName": "current",
-    "version": "0.9.0"
+    "version": "0.9.1"
    }
   ],
   "refresh": "",
-  "schemaVersion": 27,
+  "schemaVersion": 30,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -378,7 +407,7 @@
   "timezone": "",
   "title": "Power Plant",
   "uid": "u66HlA77k",
-  "version": null,
-  "overwrite": true
- }
+  "version": null
+ },
+ "overwrite": true
 }
