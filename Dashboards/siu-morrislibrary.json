@@ -22,11 +22,11 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": "null",
+  "id": null,
   "links": [],
   "panels": [
    {
-    "datasource": "TestData DB",
+    "datasource": "Prometheus Local",
     "fieldConfig": {
      "defaults": {},
      "overrides": []
@@ -63,7 +63,6 @@
      "y": 0
     },
     "id": 2,
-    "links": [],
     "newFlag": false,
     "rulesData": {
      "rulesData": [
@@ -83,22 +82,14 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [
-        {
-         "hidden": false,
-         "linkOn": "a",
-         "linkParams": false,
-         "linkUrl": "https://10.2.5.6",
-         "pattern": "39"
-        }
-       ],
+       "linkData": [],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
        "metricType": "serie",
        "order": 1,
        "overlayIcon": false,
-       "pattern": "A-series",
+       "pattern": "Morris{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"MR\"}",
        "rangeData": [],
        "reduce": false,
        "refId": "A",
@@ -153,22 +144,14 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [
-        {
-         "hidden": false,
-         "linkOn": "a",
-         "linkParams": false,
-         "linkUrl": "http://10.2.5.4:8088",
-         "pattern": "40"
-        }
-       ],
+       "linkData": [],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
        "metricType": "serie",
        "order": 2,
        "overlayIcon": false,
-       "pattern": "A-series",
+       "pattern": "Morris{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"LTE\"}",
        "rangeData": [],
        "reduce": true,
        "refId": "A",
@@ -211,36 +194,13 @@
     },
     "targets": [
      {
-      "alias": "",
-      "csvWave": {
-       "timeStep": 60,
-       "valuesCSV": "0,0,2,2,1,1"
-      },
       "exemplar": true,
       "expr": "Morris{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"LTE\"}",
       "interval": "",
       "legendFormat": "",
-      "lines": 10,
-      "max": 1,
-      "min": 1,
-      "points": [],
-      "pulseWave": {
-       "offCount": 3,
-       "offValue": 1,
-       "onCount": 3,
-       "onValue": 2,
-       "timeStep": 60
-      },
+      "max": 100,
       "refId": "A",
-      "scenarioId": "random_walk",
-      "stream": {
-       "bands": 1,
-       "noise": 2.2,
-       "speed": 250,
-       "spread": 3.5,
-       "type": "signal"
-      },
-      "stringInput": ""
+      "scenarioId": "random_walk"
      },
      {
       "exemplar": true,
@@ -274,7 +234,7 @@
   "timezone": "",
   "title": "Morris Library",
   "uid": "orygQ0n7z",
-  "version": "null"
- },
- "overwrite": "true"
+  "version": null,
+  "overwrite": true
+ }
 }
