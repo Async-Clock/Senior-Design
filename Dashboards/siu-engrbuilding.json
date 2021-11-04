@@ -26,11 +26,8 @@
   "links": [],
   "panels": [
    {
-    "datasource": "Prometheus Local",
-    "fieldConfig": {
-     "defaults": {},
-     "overrides": []
-    },
+    "datasource": "Prometheus",
+    "editedFlag": false,
     "flowchartsData": {
      "flowcharts": [
       {
@@ -148,7 +145,15 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [],
+       "linkData": [
+        {
+         "hidden": false,
+         "linkOn": "a",
+         "linkParams": false,
+         "linkUrl": "https://10.2.5.3",
+         "pattern": "50"
+        }
+       ],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
@@ -210,7 +215,15 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [],
+       "linkData": [
+        {
+         "hidden": false,
+         "linkOn": "a",
+         "linkParams": false,
+         "linkUrl": "http://10.2.5.1",
+         "pattern": "51"
+        }
+       ],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
@@ -219,7 +232,7 @@
        "overlayIcon": false,
        "pattern": "Engineering{instance=\"localhost:8000\", job=\"Custom Exporter\", method=\"LTE\"}",
        "rangeData": [],
-       "reduce": true,
+       "reduce": false,
        "refId": "A",
        "sanitize": false,
        "shapeData": [
@@ -282,11 +295,11 @@
     "transparent": true,
     "type": "agenty-flowcharting-panel",
     "valueName": "current",
-    "version": "0.9.0"
+    "version": "0.9.1"
    }
   ],
   "refresh": "5s",
-  "schemaVersion": 27,
+  "schemaVersion": 30,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -300,7 +313,7 @@
   "timezone": "",
   "title": "ENGR Building",
   "uid": "3mMd8An7k",
-  "version": null,
-  "overwrite": true
- }
+  "version": null
+ },
+ "overwrite": true
 }
