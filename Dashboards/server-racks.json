@@ -22,7 +22,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": "null",
+  "id": null,
   "links": [],
   "overwrite": true,
   "panels": [
@@ -198,7 +198,7 @@
   "timezone": "",
   "title": "Server Room Dashboard",
   "uid": "Dqh7P0n7k",
-  "version": "null"
+  "version": null
  },
  "overwrite": true
 }
