@@ -9,6 +9,12 @@
      "hide": true,
      "iconColor": "rgba(0, 211, 255, 1)",
      "name": "Annotations & Alerts",
+     "target": {
+      "limit": 100,
+      "matchAny": false,
+      "tags": [],
+      "type": "dashboard"
+     },
      "type": "dashboard"
     }
    ]
@@ -16,11 +22,11 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": "null",
+  "id": null,
   "links": [],
   "panels": [
    {
-    "datasource": "Xeon-Gold-Server",
+    "datasource": null,
     "fieldConfig": {
      "defaults": {},
      "overrides": []
@@ -33,7 +39,7 @@
        "center": true,
        "csv": "## See more information for the syntax at https://drawio-app.com/import-from-csv-to-drawio/\n##\n## Example CSV. Use ## for comments and # for configuration.\n## The following names are reserved and should not be used (or ignored):\n## id, tooltip, placeholder(s), link and label (see below)\n##\n#\n## Node label with placeholders and HTML.\n## Default is '%name_of_first_column%'.\n#\n# label: %name%<br><i style=\"color:gray;\">%position%</i><br><a href=\"mailto:%email%\">Email</a>\n#\n## Node style (placeholders are replaced once).\n## Default is the current style for nodes.\n#\n# style: label;image=%image%;whiteSpace=wrap;html=1;rounded=1;fillColor=%fill%;strokeColor=%stroke%;\n#\n## Parent style for nodes with child nodes (placeholders are replaced once).\n#\n# parentstyle: swimlane;whiteSpace=wrap;html=1;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;\n#\n## Optional column name that contains a reference to a named style in styles.\n## Default is the current style for nodes.\n#\n# stylename: -\n#\n## JSON for named styles of the form {\"name\": \"style\", \"name\": \"style\"} where style is a cell style with\n## placeholders that are replaced once.\n#\n# styles: -\n#\n## Optional column name that contains a reference to a named label in labels.\n## Default is the current label.\n#\n# labelname: -\n#\n## JSON for named labels of the form {\"name\": \"label\", \"name\": \"label\"} where label is a cell label with\n## placeholders.\n#\n# labels: -\n#\n## Uses the given column name as the identity for cells (updates existing cells).\n## Default is no identity (empty value or -).\n#\n# identity: -\n#\n## Uses the given column name as the parent reference for cells. Default is no parent (empty or -).\n## The identity above is used for resolving the reference so it must be specified.\n#\n# parent: -\n#\n## Adds a prefix to the identity of cells to make sure they do not collide with existing cells (whose\n## IDs are numbers from 0..n, sometimes with a GUID prefix in the context of realtime collaboration).\n## Default is csvimport-.\n#\n# namespace: csvimport-\n#\n## Connections between rows (\"from\": source colum, \"to\": target column).\n## Label, style and invert are optional. Defaults are '', current style and false.\n## If placeholders are used in the style, they are replaced with data from the source.\n## An optional placeholders can be set to target to use data from the target instead.\n## In addition to label, an optional fromlabel and tolabel can be used to name the column\n## that contains the text for the label in the edges source or target (invert ignored).\n## The label is concatenated in the form fromlabel + label + tolabel if all are defined.\n## The target column may contain a comma-separated list of values.\n## Multiple connect entries are allowed.\n#\n# connect: {\"from\": \"manager\", \"to\": \"name\", \"invert\": true, \"label\": \"manages\", \\\n#          \"style\": \"curved=1;endArrow=blockThin;endFill=1;fontSize=11;\"}\n# connect: {\"from\": \"refs\", \"to\": \"id\", \"style\": \"curved=1;fontSize=11;\"}\n#\n## Node x-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# left: \n#\n## Node y-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# top: \n#\n## Node width. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the width. Default is auto.\n#\n# width: auto\n#\n## Node height. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the height. Default is auto.\n#\n# height: auto\n#\n## Padding for autosize. Default is 0.\n#\n# padding: -12\n#\n## Comma-separated list of ignored columns for metadata. (These can be\n## used for connections and styles but will not be added as metadata.)\n#\n# ignore: id,image,fill,stroke,refs,manager\n#\n## Column to be renamed to link attribute (used as link).\n#\n# link: url\n#\n## Spacing between nodes. Default is 40.\n#\n# nodespacing: 40\n#\n## Spacing between levels of hierarchical layouts. Default is 100.\n#\n# levelspacing: 100\n#\n## Spacing between parallel edges. Default is 40. Use 0 to disable.\n#\n# edgespacing: 40\n#\n## Name or JSON of layout. Possible values are auto, none, verticaltree, horizontaltree,\n## verticalflow, horizontalflow, organic, circle or a JSON string as used in Layout, Apply.\n## Default is auto.\n#\n# layout: auto\n#\n## ---- CSV below this line. First line are column names. ----\nname,position,id,location,manager,email,fill,stroke,refs,url,image\nEvan Miller,CFO,emi,Office 1,,me@example.com,#dae8fc,#6c8ebf,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-9-2-128.png\nEdward Morrison,Brand Manager,emo,Office 2,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-10-3-128.png\nRon Donovan,System Admin,rdo,Office 3,Evan Miller,me@example.com,#d5e8d4,#82b366,\"emo,tva\",https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-2-128.png\nTessa Valet,HR Director,tva,Office 4,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-3-128.png\n",
        "download": false,
-       "editorTheme": "dark",
+       "editorTheme": "atlas",
        "editorUrl": "https://www.draw.io",
        "enableAnim": true,
        "grid": false,
@@ -43,13 +49,13 @@
        "tooltip": true,
        "type": "xml",
        "url": "http://<YourUrl>/<Your XML/drawio file/api>",
-       "xml": "<mxfile host=\"app.diagrams.net\" modified=\"2021-05-06T16:15:33.394Z\" agent=\"5.0 (Windows)\" etag=\"4PlNiroX0xBRlEj-k-zW\" version=\"14.6.10\" type=\"embed\"><diagram id=\"B6r0fVkcCxxVOgcdN7Ls\" name=\"Page-1\">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</diagram></mxfile>",
+       "xml": "<mxfile host=\"app.diagrams.net\" modified=\"2021-09-08T22:57:36.888Z\" agent=\"5.0 (Windows)\" etag=\"Hc0PxfmMcf_6QysPK4dP\" version=\"15.1.2\" type=\"embed\"><diagram id=\"abnss1EXO-ynJiJGXrM2\" name=\"Page-1\">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</diagram></mxfile>",
        "zoom": "100%"
       }
      ]
     },
     "format": "short",
-    "graphId": "flowchart_2",
+    "graphId": "flowchart_23763571993",
     "gridPos": {
      "h": 23,
      "w": 24,
@@ -58,12 +64,12 @@
     },
     "id": 2,
     "newFlag": false,
-    "pluginVersion": "7.5.5",
+    "pluginVersion": "7.4.3",
     "rulesData": {
      "rulesData": [
       {
        "aggregation": "current",
-       "alias": "Xeon-Gold Status",
+       "alias": "myRule",
        "colors": [
         "rgba(245, 54, 54, 0.9)",
         "rgba(50, 172, 45, 0.97)"
@@ -77,23 +83,31 @@
        "gradient": false,
        "hidden": false,
        "invert": false,
-       "linkData": [],
+       "linkData": [
+        {
+         "hidden": false,
+         "linkOn": "a",
+         "linkParams": false,
+         "linkUrl": "/d/rYdddlPWk/xeon-gold-server?orgId=1&refresh=5s",
+         "pattern": "83"
+        }
+       ],
        "linkProp": "id",
        "linkRegEx": true,
        "mappingType": 1,
        "metricType": "serie",
        "order": 1,
        "overlayIcon": false,
-       "pattern": "up{instance=\"localhost:9090\", job=\"prometheus\"}",
+       "pattern": "up{instance=\"localhost:9100\", job=\"prometheus\"}",
        "rangeData": [],
-       "reduce": true,
+       "reduce": false,
        "refId": "A",
        "sanitize": false,
        "shapeData": [
         {
          "colorOn": "a",
          "hidden": false,
-         "pattern": "171",
+         "pattern": "83",
          "style": "fillColor"
         }
        ],
@@ -127,12 +141,37 @@
     },
     "targets": [
      {
+      "alias": "",
+      "csvWave": {
+       "timeStep": 60,
+       "valuesCSV": "0,0,2,2,1,1"
+      },
       "exemplar": true,
-      "expr": "up",
+      "expr": "up{instance=\"localhost:9100\",job=\"prometheus\"}",
       "interval": "",
       "legendFormat": "",
-      "queryType": "randomWalk",
-      "refId": "Xeon Gold Server Status"
+      "lines": 10,
+      "max": 100,
+      "min": 1,
+      "points": [],
+      "pulseWave": {
+       "offCount": 3,
+       "offValue": 1,
+       "onCount": 3,
+       "onValue": 2,
+       "timeStep": 60
+      },
+      "refId": "A",
+      "scenarioId": "random_walk",
+      "startValue": 99,
+      "stream": {
+       "bands": 1,
+       "noise": 2.2,
+       "speed": 250,
+       "spread": 3.5,
+       "type": "signal"
+      },
+      "stringInput": ""
      }
     ],
     "timeFrom": null,
@@ -143,6 +182,7 @@
     "version": "0.9.0"
    }
   ],
+  "refresh": "",
   "schemaVersion": 27,
   "style": "dark",
   "tags": [],
@@ -155,9 +195,9 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Server Rack Dashboard",
-  "uid": "X2JFqZCGk",
-  "version": "null"
- },
- "overwrite": "true"
+  "title": "Server Room Dashboard",
+  "uid": "Dqh7P0n7k",
+  "version": null,
+  "overwrite": true
+ }
 }
