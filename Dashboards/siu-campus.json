@@ -27,7 +27,7 @@
   "links": [],
   "panels": [
    {
-    "datasource": "Prometheus",
+    "datasource": "Prometheus Local",
     "editedFlag": false,
     "flowchartsData": {
      "flowcharts": [
